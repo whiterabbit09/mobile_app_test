@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="타이틀"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.ramotion.expandingcollection.ECBackgroundSwitcherView
+                    android:id="@+id/ec_bg_switcher_element"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <com.ramotion.expandingcollection.ECPagerView
+                    android:id="@+id/ec_pager_element"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="75dp"
+                    app:cardHeaderHeightExpanded="200dp"
+                    app:cardHeight="300dp"
+                    app:cardWidth="250dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+</LinearLayout>
